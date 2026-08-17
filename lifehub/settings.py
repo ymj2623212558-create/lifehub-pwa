@@ -77,6 +77,13 @@ DATABASES = {
     }
 }
 
+# 生产环境使用 Postgres（Railway/Render 提供 DATABASE_URL）
+_database_url = os.environ.get("DATABASE_URL")
+if _database_url:
+    import dj_database_url  # noqa: E402
+
+    DATABASES["default"] = dj_database_url.config(default=_database_url, conn_max_age=600)
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
