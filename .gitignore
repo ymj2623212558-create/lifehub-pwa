@@ -45,6 +45,9 @@ poster-design-demo.png
 # Hermes 本地配置（含本机绝对路径，不对外）
 .hermes/
 
+# PocketBay 部署会话（含设备密钥，不对外）
+.pocketbay/
+
 # 爬虫/导入的临时数据文件（含真实菜谱数据，体积大且非源码）
 *.json.tmp
 meishichina_*.json
