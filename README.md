@@ -65,6 +65,16 @@ python manage.py seed_data
 
 这会创建演示用户和四个模块的完整示例数据。
 
+### 3.5 导入菜谱库（可选，推荐）
+
+仓库自带 **1136 道菜谱**（`data/recipes.json`，爬自美食天下），一条命令导入:
+
+```bash
+python import_recipes.py data/recipes.json
+```
+
+导入后菜谱库即有 1136 道真实菜谱（含食材/步骤/难度/用时），所有用户可见。
+
 ### 4. 启动服务器
 
 Windows 一键启动（自动建环境 + 迁移 + 8002 端口）:

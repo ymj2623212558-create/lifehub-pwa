@@ -18,7 +18,7 @@ from food.models import Recipe
 
 
 def main():
-    infile = sys.argv[1] if len(sys.argv) > 1 else "meishichina_recipes.json"
+    infile = sys.argv[1] if len(sys.argv) > 1 else "data/recipes.json"
     username = sys.argv[2] if len(sys.argv) > 2 else None
     with open(infile, encoding="utf-8") as f:
         recs = json.load(f)
